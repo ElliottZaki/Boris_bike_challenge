@@ -1,4 +1,4 @@
-require docking_station.rb
+require 'docking_station'
 # it "releases a bike if it is working"
 describe DockingStation do
   
