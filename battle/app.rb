@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 
 get '/' do
-    "Hello World!!! My name is Ben and Elliott"
+    "Hello World!!! My name is Elliott"
 end
 
 get '/secret' do
@@ -18,7 +18,5 @@ get '/flamingos' do
 end
 
 get '/cat' do
-    "<div style='border: solid red'>
-    <img src='https://i.imgur.com/jFaSxym.png>'
-    </div>"
+    erb(:index)
 end
