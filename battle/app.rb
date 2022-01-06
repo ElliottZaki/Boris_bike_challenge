@@ -17,7 +17,15 @@ get '/flamingos' do
     "Insert photo of a pink chicken."
 end
 
-get '/cat' do
+get '/random-cat' do
     @sample_name = ["Amigo", "Misty", "Almond"].sample
+    erb(:index)
+end
+
+get '/named-cat' do
+    #query strings affects the params. 
+    #you can add a new param by using & e.g. sample_name=ell&age=300 in the URL
+    p 'params', params
+    @sample_name = params[:sample_name]
     erb(:index)
 end
